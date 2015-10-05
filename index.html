@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript Variables Listener</title>
+    <style type="text/css">
+
+    </style>
+    <script src="js/listeners.js"></script>
+    <script type="application/javascript">
+        var var1 = 'this is a string';
+
+        addListener('var1', function(res) {
+            document.getElementById('number').innerHTML = res;
+        });
+
+        function updateVal() {
+            var1 = document.getElementById('update').value;
+            return false;
+        }
+    </script>
+</head>
+<body>
+
+<div id="number"></div>
+
+<form onsubmit="updateVal(); return false;">
+    <input type="text" name="input" id="update" />
+</form>
+
+</body>
+</html>
